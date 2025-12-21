@@ -41,7 +41,7 @@ export default defineConfig(async options => {
       ...commonConfig,
       entry: exportEntries,
       dts: { resolve: true },
-      format: ['esm', 'cjs'],
+      format: ['esm'],
       target: NODE_TARGET,
       platform: 'neutral',
       external: [...globalManagerPackages, ...globalPreviewPackages],
@@ -63,7 +63,7 @@ export default defineConfig(async options => {
       ...commonConfig,
       entry: previewEntries,
       dts: { resolve: true },
-      format: ['esm', 'cjs'],
+      format: ['esm'],
       platform: 'browser',
       external: globalPreviewPackages,
     })
